@@ -1,0 +1,8 @@
+FROM node:latest
+WORKDIR /app
+COPY package*.json /app/
+RUN npm install
+COPY . .
+EXPOSE 8080
+CMD ["node", "index.js"]
+[root@docker-m1 forethought-app]#
