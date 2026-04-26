@@ -15,24 +15,20 @@
       <input class="newtask" test="text" name="newtask" placeholder="Add a task!">
       <button class="addbutton">Add</button><br />
       <% for( var i=0; i < task.length; i++){ %>
-        <ul>
-          <li>
-            <input class="check" type="checkbox" name="check" value="<%= task[i] %>" />
-            <%= task[i] %>
-          </li>
-          <% } %>
-        </ul>
-        <br /><button class="completed" formaction="/removetask" type="submit">Complete Checked Tasks</button>
+        <li>
+          <input class="check" type="checkbox" name="check" value="<%= task[i] %>" />
+          <%= task[i] %>
+        </li>
+        <% } %>
+          <br /><button class="completed" formaction="/removetask" type="submit">Complete Checked Tasks</button>
     </form>
     <h2>Completed</h2>
     <% for(var i=0; i < complete.length; i++){ %>
-      <ul>
-        <li><input class="checked" type="checkbox" checked>
-          <%= complete[i] %>
-        </li>
-        <% } %>
-      </ul>
-      <p class="credit">by <a href="https://www.faisal-ibrahim.com">Faisal Ibrahim</a></p>
+      <li><input class="checked" type="checkbox" checked>
+        <%= complete[i] %>
+      </li>
+      <% } %>
+        <p class="credit">by <a href="https://www.faisal-ibrahim.com">Faisal Ibrahim</a></p>
   </div>
 </body>
 
